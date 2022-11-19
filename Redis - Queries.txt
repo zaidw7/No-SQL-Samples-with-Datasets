@@ -1,0 +1,52 @@
+Query Sitcoms and Actors list for numbers of hashes 
+
+0. Get all sitcom titles X
+Lrange sitcoms 0 10
+
+1. All Sitcoms by Rating X
+zrange Rating 0 10 withscores
+
+2. Sitcoms with more than 200 Episodes X
+zrangebyscore Episodes 200 +inf withscores
+
+3. Sitcoms with less than 10 seasons XX
+zrangebyscore Seasons 0 10 withscores
+
+4. Sitcoms released before 2000 X
+zrangebyscore Year 0 2000 withscores
+
+5. Sitcoms released in or after 2007 XX
+zrangebyscore Year 2007 2022 withscores
+
+6. Sitcoms with more than 70 Awards X
+zrangebyscore Awards 70 +inf withscores
+
+7.0 Get Actors IDs X
+lrange Actors 0 -1
+
+7.1 Neil Patrick Harris details X
+hgetall Actor:8
+
+8. What character did Ty Burell play in modenrn family? XX
+hget Actor:22 Sitcom.Char
+
+9. What character did Jim Parson play and in what sitcom X
+hmget Actor:13 Sitcom.Char Sitcom
+
+10. Episodes of Seinfeld and The Office X
+zrange Episodes 0 1 withscores
+
+11. Awards won by HIMYM X
+Hmget Sitcom:1 Title Awards
+
+12. Seasons of The BBT XX
+Hmget Sitcom:4 Title Seasons
+
+13. When was the office released X
+hmget Sitcom:5 Title Year
+
+14. All sitcoms by awards XX
+zrangebyscore Awards 0 +inf withscores
+
+15. All details of Seinfeld X
+hgetall Sitcom:2

@@ -1,0 +1,41 @@
+-- Creating the DB and collection
+Use CW
+db.createCollection("Playstation_Store")
+
+-- Inserting documents into the collection
+
+db.Playstation_Store.insert( {"_id":1, "Title":"Ghostrunner", "Genre":["Action"], "Developer":"505 Games", "Price":24.99, "Released":new Date ("2021/09/28"), "Available for PS4":false, "PEGI":18,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":2, "Title":"Fortnite", "Genre":["Action", "Adventure", "Unique"], "Developer":"Epic Games", "Price":0, "Released":new Date("2020/11/12"), "Available for PS4":true, "PEGI":12,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":3, "Title":"Ghost of Tsushima: Legends", "Genre":["Unique"], "Developer":"Sony", "Price":15.99, "Released":new Date("2021/09/03"), "Available for PS4":false, "PEGI":18,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":4, "Title":"Ratchet & Clank: Rift Apart", "Genre":["Action"], "Developer":"Sony", "Price":69.99, "Released":new Date("2021/06/11"), "Available for PS4":false, "PEGI":7,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":5, "Title":"Ghostwire: Tokyo", "Genre":["Action","Adventure"], "Developer":"Bethesda", "Price":59.99, "Released":new Date("2022/03/25"), "Available for PS4":false, "PEGI":12,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":6, "Title":"Returnal", "Genre":["Shooter"], "Developer":"Sony", "Price":69.99, "Released":new Date("2021/04/30"), "Available for PS4":false, "PEGI":16,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":7, "Title":"Elden Ring", "Genre":["Role Playing"], "Developer":"Bandai Namco", "Price":49.99, "Released":new Date("2022/02/25"), "Available for PS4":true, "PEGI":16,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":8, "Title":"Cyberpunk 2077", "Genre":["Role Playing"], "Developer":"CD Projekt", "Price":39.99, "Released":new Date("2022/02/15"), "Available for PS4":true, "PEGI":18,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":9, "Title":"Gran Turismo 7", "Genre":["Racing"], "Developer":"Polyphony Digital", "Price":69.99, "Released":new Date("2022/03/04"), "Available for PS4":false, "PEGI":3,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":10, "Title":"WWE 2K22", "Genre":["Sport"], "Developer":"2K", "Price":64.99, "Released":new Date("2022/03/11"), "Available for PS4":false, "PEGI":16,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":11, "Title":"Star Wars Jedi: Fallen Order", "Genre":["Action","Adventure","Unique"], "Developer":"EA", "Price":8.99, "Released":new Date ("2021/06/11"), "Available for PS4":true, "PEGI":16,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":12, "Title":"eFootball 2022", "Genre":["Sport"], "Developer":"Konami", "Price":0, "Released":new Date ("2021/09/30"), "Available for PS4":true, "PEGI":3,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":13, "Title":"Horizon Forbidden West", "Genre":["Action"], "Developer":"Sony", "Price":69.99, "Released":new Date ("2022/02/18"), "Available for PS4":true, "PEGI":16,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":14, "Title":"Fifa 22", "Genre":["Sport"], "Developer":"EA", "Price":24.49, "Released":new Date ("2021/10/01"), "Available for PS4":true, "PEGI":3,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":15, "Title":"Assasin's Creed Valhalla", "Genre":["Role Playing"], "Developer":"Ubisoft", "Price":23.99, "Released":new Date ("2020/11/12"), "Available for PS4":true, "PEGI":18,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":16, "Title":"Madden NFL 22", "Genre":["Sport"], "Developer":"EA", "Price":20.99, "Released":new Date ("2021/08/20"), "Available for PS4":true, "PEGI":3,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":17, "Title":"Uncharted: Legacy of Thieves Collection", "Genre":["Action","Adventure"], "Developer":"Sony", "Price":44.99, "Released":new Date ("2022/01/28"), "Available for PS4":false, "PEGI":16,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":18, "Title":"Dying Light 2 Stay Human", "Genre":["Unique"], "Developer":"Techland", "Price":54.99, "Released":new Date ("2022/02/04"), "Available for PS4":true, "PEGI":18,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":19, "Title":"Marvel's Spider-Man: Miles Morales", "Genre":["Action"], "Developer":"Sony", "Price":49.99, "Released":new Date ("2020/11/12"), "Available for PS4":true, "PEGI":16,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":20, "Title":"No Man's Sky", "Genre":["Action","Adventure","Unique"], "Developer":"Hello Games", "Price":39.99, "Released":new Date ("2020/11/12"), "Available for PS4":true, "PEGI":7,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":21, "Title":"Marvel's Guardians of the Galaxy", "Genre":["Action"], "Developer":"Square Enix", "Price":29.99, "Released":new Date ("2021/10/26"), "Available for PS4":true, "PEGI":16,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":22, "Title":"CRSED", "Genre":["Action","Adventure","Unique"], "Developer":"Gaijin Distribution", "Price":0, "Released":new Date ("2020/12/15"), "Available for PS4":true, "PEGI":16,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":23, "Title":"Marvel's Avengers", "Genre":["Action"], "Developer":"Square Enix", "Price":17.99, "Released":new Date ("2020/11/12"), "Available for PS4":true, "PEGI":16,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":24, "Title":"Battlefield 2042", "Genre":["Shooter"], "Developer":"EA", "Price":34.99, "Released":new Date ("2021/11/19"), "Available for PS4":true, "PEGI":16,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":25, "Title":"NBA 2K22", "Genre":["Sport"], "Developer":"2K", "Price":21.74, "Released":new Date ("2021/09/10"), "Available for PS4":true, "PEGI":3,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":26, "Title":"Dirt 5", "Genre":["Racing","Unique"], "Developer":"EA", "Price":54.99, "Released":new Date ("2020/11/12"), "Available for PS4":true, "PEGI":12,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":27, "Title":"Jurassic World Evolution 2", "Genre":["Simulation","Strategy"], "Developer":"Frontier Developments", "Price":32.49, "Released":new Date ("2021/11/09"), "Available for PS4":true, "PEGI":16,"PS Plus required for online play":false})
+db.Playstation_Store.insert( {"_id":28, "Title":"Watch Dogs: Legion", "Genre":["Action","Adventure","Unique"], "Developer":"Ubisoft", "Price":16.79, "Released":new Date ("2020/11/12"), "Available for PS4":true, "PEGI":18,"PS Plus required for online play":true})
+db.Playstation_Store.insert( {"_id":29, "Title":"Far Cry 6", "Genre":["Unique"], "Developer":"Ubisoft", "Price":59.99, "Released":new Date ("2021/10/07"), "Available for PS4":true, "PEGI":18,"PS Plus required for online play":true})
+
+
+
+
+
+

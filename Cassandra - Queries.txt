@@ -1,0 +1,50 @@
+Use cwdb;
+
+1. Best selling albums with more than 25 million sales and who was the artist? 
+select album, artist, sales where sales > 25 allow filtering;
+
+2. Best selling bands and how many millions did they sell, show members of the band? XX
+select artist, members, sales from artists where band = true allow filtering;
+
+3. Best selling individiual artists with sales XX
+select artist, sales from artists where band = false allow filtering;
+
+4. Best selling non-active artists with sales
+select artist, sales from artists where active = false allow filtering;
+
+5. Best selling acive artists XX
+select artist, sales from artists where active= true allow filtering;
+
+6. Best selling hip hop albums
+select album, artist, sales from albums where genre ='Hip Hop' allow filtering;
+
+7. Best selling pop artists XX
+select artist, sales from artists where genre = 'Pop' allow filtering;
+
+8. Best selling albums with UK sales over 4 million XX
+select album, artist, uk_sales from albums where uk_sales > 4 allow filtering;
+
+9. Best selling albums with US over 19 million 
+select album, artist, uk_sales from albums where us_sales > 19 allow filtering;
+
+10. Best selling artists from the UK
+select artist, country, sales from artists where country = 'United Kingdom' allow filtering;
+
+11. Best selling albums after 2000 XX
+select album, sales, year from albums where year > 2000 allow filtering;
+
+12. Best selling artists that debuted after 1995
+select artist, sales, start_year from artists where start_year > 1995 allow filtering;
+
+13. Best selling Hip Hop albums in the UK, 1mil or more sales
+select album, artist, uk_sales from albums where genre='Hip Hop' and uk_sales >= 1 allow filtering;
+
+14. Best selling pop albums after 2000
+select album, artist, year from albums where genre='Pop' and year > 2000 allow filtering;
+
+15. How many millions did Linkin Park sell and who are their members?
+select artist, members, sales from artists where artist = 'Linkin Park' allow filtering;
+
+16. How many albums does Michael Jackson have in the top selling albums and what is the total sales of these albums?
+select artist, count(album) as number_of_albums, sum(sales) as total_sales from albums where artist = 'Michael Jackson' allow filtering;
+

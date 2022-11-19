@@ -1,0 +1,34 @@
+use CW
+
+1. Games available for PS4
+db.Playstation_Store.find({'Available for PS4':true}).pretty()
+
+2. Free Games
+db.Playstation_Store.find({'Price':0}).pretty()
+
+3. Games that don't require a plus subscription
+db.Playstation_Store.find({'PS Plus required for online play':false}).pretty()
+
+4. Games suitable for 15 year olds.
+db.Playstation_Store.find({'PEGI':{$lte:15}}).pretty()
+
+5. Sport Games only.
+db.Playstation_Store.find({'Genre':'Sport'}).pretty()
+
+6. Games developed by EA.
+db.Playstation_Store.find({'Developer':'EA'}).pretty()
+
+7. Games released in 2022
+db.Playstation_Store.find({'Released':{$gt:new Date("2021-12-31")}}).pretty()
+
+8. Games for less than £25 Sorted from highest to lowest
+db.Playstation_Store.find({'Price':{$lt:25}}).sort({'Price':1}).pretty()
+
+9. Unique games suitable for 17 year olds.
+db.Playstation_Store.find({$and:[{'Genre':'Unique'},{'PEGI':{$lte:17}}]}).pretty()
+
+10. Which Games released with the PS5 release 2020/11/12 XX
+db.Playstation_Store.find({'Released':new Date("2020-11-12")}).pretty()
+
+11. How many games released with the PS5 release?
+db.Playstation_Store.aggregate([{$match:{'Released':new Date("2020-11-12")}},{$count:"Number_of_Games"}])

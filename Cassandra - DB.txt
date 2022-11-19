@@ -1,0 +1,49 @@
+-- Creating The tables
+
+create table Albums( ID int primary key, Album varchar, Artist varchar,
+Genre varchar, Band boolean, Members set<text>, Year int, Sales float, UK_Sales float, US_Sales float);
+
+create table Artists( ID int primary key, Artist varchar, Country varchar, Start_Year int,
+Genre varchar, Active boolean, Band boolean, Members set<text>, Sales float);
+
+-- Populating the Albums table 
+
+insert into Albums (ID, Album, Artist, Genre, Band, Year, Sales, UK_Sales, US_Sales) values (1,'Thriller', 'Michael Jackson', 'Pop', False, 1982, 49.2, 4.5, 34);
+insert into Albums (ID, Album, Artist, Genre, Band, Members, Year, Sales, UK_Sales, US_Sales) values (2,'Hotel California','Eagles','Rock',True,{'Don Felder','Don Henley','Joe Walsh','Glenn Frey','Randy Meisner'},1976, 31.5, 1.8, 26);
+insert into Albums (ID, Album, Artist, Genre, Band, Year, Sales, UK_Sales, US_Sales) values (3,'Come On Over', 'Shania Twain', 'Pop', False, 1997, 29.6, 3.3, 20);
+insert into Albums (ID, Album, Artist, Genre, Band, Members, Year, Sales, UK_Sales, US_Sales) values (4,'Back in Black','AC/DC','Rock',True,{'Angus Young','Phil Rudd','Cliff Williams','Brian Johnson','Malcolm Young'},1980, 29.5, 0.6, 25);
+insert into Albums (ID, Album, Artist, Genre, Band, Members, Year, Sales, UK_Sales, US_Sales) values (5,'The Dark Side of the Moon','Pink Floyd','Rock',True,{'David Gilmour','Roger Waters','Richard Wright','Nick Mason','Syd Barrett','Bob Klose'},1973, 24.4, 4.2, 15);
+insert into Albums (ID, Album, Artist, Genre, Band, Year, Sales, UK_Sales, US_Sales) values (6,'Bad', 'Michael Jackson', 'Pop', False, 1987, 21.1, 4.2, 11);
+insert into Albums (ID, Album, Artist, Genre, Band, Year, Sales, UK_Sales, US_Sales) values (7,'21', 'Adele', 'Pop', False, 2011, 26.4, 6, 14);
+insert into Albums (ID, Album, Artist, Genre, Band, Members, Year, Sales, UK_Sales, US_Sales) values (8,'Appetite for Destruction','Guns N Roses','Rock',True,{'Axl Rose','Slash','Izzy Stradlin','Duff McKagan','Steven Adler'},2000, 21.9, 1.2, 18);
+insert into Albums (ID, Album, Artist, Genre, Band, Members, Year, Sales, UK_Sales, US_Sales) values (9,'Hybrid Theory','Linkin Park','Rock',True,{'Chester Bennington','Rob Bourdon','Brad Delson','Mike Shinoda','Joe Hahn'},2000, 27, 1.8, 12);
+insert into Albums (ID, Album, Artist, Genre, Band, Year, Sales, UK_Sales, US_Sales) values (10,'The Eminem Show', 'Eminem', 'Hip Hop', False, 2002, 27, 1.8, 10.6);
+insert into Albums (ID, Album, Artist, Genre, Band, Year, Sales, UK_Sales, US_Sales) values (11,'Recovery', 'Eminem', 'Hip Hop', False, 2010, 5.8, 1, 3);
+insert into Albums (ID, Album, Artist, Genre, Band, Members, Year, Sales, UK_Sales, US_Sales) values (12,'X&Y','Coldplay','Rock',True,{'Chris Martin','Jonny Buckland','Guy Berryman','Will Champion'},2005, 9.4, 2.9, 3);
+insert into Albums (ID, Album, Artist, Genre, Band, Year, Sales, UK_Sales, US_Sales) values (13,'25', 'Adele', 'Pop', False, 2015, 22, 3.4, 11);
+insert into Albums (ID, Album, Artist, Genre, Band, Year, Sales, UK_Sales, US_Sales) values (14,'The Marshall Mather LP', 'Eminem', 'Hip Hop', False, 2000, 21, 2.5, 11);
+insert into Albums (ID, Album, Artist, Genre, Band, Year, Sales, UK_Sales, US_Sales) values (15,'Tha Carter III', 'Lil Wayne', 'Hip Hop', False, 2008, 6.5, 0.3, 6);
+insert into Albums (ID, Album, Artist, Genre, Band, Year, Sales, UK_Sales, US_Sales) values (16,'All Eyez On Me', '2Pac', 'Hip Hop', False, 1996, 9, 0.3, 5.9);
+
+-- Populating the Artists table
+
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Sales) values ( 1, 'Eminem', 'United States', 1996, 'Hip Hop', True, False, 247.6);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Members, Sales) values ( 2, 'Queen', 'United Kingdom', 1971, 'Rock', True, True, {'Freddie Mercury','John Deacon','Roger Taylor','Brian May'}, 168.9);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Members, Sales) values ( 3, 'Eagles', 'United States', 1971, 'Rock', True, True, {'Don Henley','Joe Walsh','Timothy Schmit','Vince Gill','Glenn Frey'}, 151.8);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Members, Sales) values ( 4, 'The Rolling Stones', 'United Kingdom', 1962, 'Rock', True, True, {'Mick Jagger','Keith Richards','Ronnie Wood','Brian Jones','Ian Stewart','Charlie Watts','Bill Wyman','Mick Taylor'}, 102);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Sales) values ( 5, 'Drake', 'Canada', 2001, 'Hip Hop', True, False, 391.2);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Members, Sales) values ( 6, 'The Beatles', 'United Kingdom', 1960, 'Rock', False, True, {'John Lennon','Paul McCartney','George Harrison','Ringo Starr'}, 288.7);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Sales) values ( 7, 'Elvis Presley', 'United States', 1954, 'Rock', False, False, 229.4);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Sales) values ( 8, 'Michael Jackson', 'United States', 1964, 'Pop', False, False, 247.6);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Sales) values ( 9, 'Elton John', 'United Kingdom', 1964, 'Rock', True, False, 203.3);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Members, Sales) values ( 10, 'Led Zeppelin', 'United Kingdom', 1968, 'Rock', False, True, {'Jimmy Page','Robert Plant','John Bonham','John Paul Jones'}, 142.2);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Sales) values ( 11, 'Rihanna', 'United States', 2005, 'Pop', True, False, 321.7);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Members, Sales) values ( 12, 'Pink Floyd', 'United Kingdom', 1965, 'Rock', False, True, {'David Gilmour','Roger Waters','Richard Wright','Nick Mason','Syd Barrett','Bob Klose'}, 123.1);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Sales) values ( 13, 'Taylor Swift', 'United States', 2006, 'Pop', True, False, 235.6);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Members, Sales) values ( 14, 'AC/DC', 'Australia', 1973, 'Rock', True, True, {'Angus Young','Phil Rudd','Cliff Williams','Brian Johnson','Stevie Young','Malcolm Young','Bon Scott'}, 128.1);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Sales) values ( 15, 'Ed Sheeran', 'United Kingdom', 2004, 'Pop', True, False, 232.5);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Sales) values ( 16, 'Lil Wayne', 'United States', 1996, 'Hip Hop', True, False, 164);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Sales) values ( 17, 'Adele', 'United Kingdom', 2006, 'Pop', True, False, 128);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Members, Sales) values ( 18, 'Coldplay', 'United Kingdom', 1996, 'Rock', True, True, {'Chris Martin','Jonny Buckland','Guy Berryman','Will Champion','Phil Harvey'}, 103.6);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Members, Sales) values ( 19, 'Linkin Park', 'United States', 1996, 'Rock', True, True, {'Chester Bennington','Rob Bourdon','Brad Delson','Mike Shinoda','Dave Farrell','Joe Hahn'}, 92.5);
+insert into Artists (ID, Artist, Country, Start_Year, Genre, Active, Band, Members, Sales) values ( 20, 'ABBA', 'Sweden', 1972, 'Rock', True, True, {'Agnetha Faltskog','Bjorn Ulvaeus','Benny Andersson','Anni-Frid Lyngstad'}, 67.5);

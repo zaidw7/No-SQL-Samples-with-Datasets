@@ -1,0 +1,47 @@
+1. Which movies did Iron man appear in
+Match (A:Actor)-[R:Appeared_in]->(M:Movies) where A.Avenger = 'Iron Man' return A,R,M
+
+1.1 Number of movies in 1
+Match (A:Actor)-[R:Appeared_in]->(M:Movies) where A.Avenger = 'Iron Man' return count(R) as Number_of_Movies
+
+2. What is the 7th movie in chronological order XX
+Match (M:Movies) where M.Chronological = 7 return M.Title
+
+3. which movies were directed by the any of the Russos
+Match (D:Directors)-[R:Directed]->(M:Movies) where D.Name contains 'Russo' return M.Title, D.Name
+
+4. Top 3 Highest rated movies and what is their chronological order
+Match (M:Movies) return M.Title, M.Rate, M.Chronological order by M.Rate desc limit 3
+
+5. Movies released before 2017 in chronological order XX
+Match (M:Movies) where M.Released < 2017 return M.Title, M.Rate, M.Chronological, M.Released order by M.Chronological
+
+6. Shortest path between Robert Downy Jr. and Tom Holland
+Match p= shortestpath((A:Actor)-[*]-(A1:Actor)) where A.Name = 'Tom Holland' and A1.Name = 'Robert Downy Jr.' return p
+
+7. Movies rated higher than 8 in chronological order
+Match (M:Movies) where M.Rate > 8 return M.Title, M.Rate, M.Chronological order by M.Chronological
+
+8. All movies and actors in movies directed by Jon Watts
+Match (D:Directors)-[:Directed]->(M:Movies)<-[:Appeared_in]-(A:Actor) where D.Name = 'Jon Watts' return M.Title, A.Name
+
+9. Which movies did Benedict Cumberbatch feature in and which character did he play?
+Match (A:Actor)-[:Appeared_in]->(M:Movies) where A.Name = 'Benedict Cumberbatch' return A.Name, A.Avenger, M.Title
+
+10. How many movies did Chris Evans appear in?
+Match (A:Actor)-[:Appeared_in]->(M:Movies) where A.Name = 'Chris Evans' return A.Name, A.Avenger, count(M.Title) as Number_of_Movies
+
+11. Which movies did Dr.Strange and Spider man feature in together?
+Match (A:Actor)-[:Appeared_in]->(M:Movies)<-[:Appeared_in]-(A1:Actor) where A.Avenger = 'Doctor Strange' and A1.Avenger = 'Spider-Man' return M.Title
+
+12. What is the lowest rate for a movie?
+Match (M:Movies) return min(M.Rate)
+
+12.1 What is the lowest rated movie and when was it released? and who directed it?
+Match (M:Movies)<-[:Directed]-(D:Directors) where M.Rate = 6.4 return M.Title, D.Name, M.Released
+
+
+
+
+
+

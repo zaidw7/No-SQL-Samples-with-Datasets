@@ -1,0 +1,86 @@
+Actors Hash
+
+HMSET Actor:1 Name Jerry-Seinfeld DOB 29-04-1954 Sitcom Seinfeld Sitcom.Char Jerry-Seinfeld
+HMSET Actor:2 Name Julia_Louis-Dreyfus DOB 13-01-1961 Sitcom Seinfeld Sitcom.Char Elaine-Benes
+HMSET Actor:3 Name Michael-Richards DOB 24-07-1949 Sitcom Seinfeld Sitcom.Char Cosmo-Kramer
+HMSET Actor:4 Name Jason-Alexander DOB 23-09-1959 Sitcom Seinfeld Sitcom.Char George-Costanza
+HMSET Actor:5 Name Josh-Radnor DOB 29-07-1974 Sitcom How-I-Met-Your-Mother Sitcom.Char Ted-Mosby
+HMSET Actor:6 Name Jason-Segel DOB 18-01-1980 Sitcom How-I-Met-Your-Mother Sitcom.Char Marshall-Eriksen
+HMSET Actor:7 Name Cobie-Smulders DOB 03-04-1982 Sitcom How-I-Met-Your-Mother Sitcom.Char Robin-Scherbatsky
+HMSET Actor:8 Name Neil-Patrick-Harris DOB 15-06-1973 Sitcom How-I-Met-Your-Mother Sitcom.Char Barney-Stinson
+HMSET Actor:9 Name Alyson-Hannigan DOB 24-03-1974 Sitcom How-I-Met-Your-Mother Sitcom.Char Lily-Aldrin
+HMSET Actor:10 Name Steve-Carell DOB 16-08-1962 Sitcom The-Office Sitcom.Char Michael-Scott
+HMSET Actor:11 Name Jenna-Fischer DOB 07-03-1974 Sitcom The-Office Sitcom.Char Pam-Beesly
+HMSET Actor:12 Name John-Krasinski DOB 20-10-1979 Sitcom The-Office Sitcom.Char Jim-Halpert
+HMSET Actor:13 Name Rainn-Wilson DOB 20-01-1966 Sitcom The-Office Sitcom.Char Dwight-Schrute
+HMSET Actor:14 Name Jim-Parsons DOB 30-04-1975 Sitcom The-Big-Bang-Theory Sitcom.Char Sheldon-Cooper
+HMSET Actor:15 Name Johnny-Galecki DOB 23-03-1973 Sitcom The-Big-Bang-Theory Sitcom.Char Leonard-Hofstadter
+HMSET Actor:16 Name Kaley-Cuoco DOB 30-11-1985 Sitcom The-Big-Bang-Theory Sitcom.Char Penny
+HMSET Actor:17 Name Simon-Helberg DOB 09-12-1980 Sitcom The-Big-Bang-Theory Sitcom.Char Howard-Wolowitz
+HMSET Actor:18 Name Kunal-Nayyar DOB 30-04-1981 Sitcom The-Big-Bang-Theory Sitcom.Char Raj-Koothrappali
+HMSET Actor:19 Name Ed-ONeill DOB 12-04-1946 Sitcom Modern-Family Sitcom.Char Jay-Pritchett
+HMSET Actor:20 Name Sofia-Vergara DOB 10-07-1972 Sitcom Modern-Family Sitcom.Char Gloria_Delgado-Pritchett
+HMSET Actor:21 Name Julie-Bowen DOB 03-03-1970 Sitcom Modern-Family Sitcom.Char Claire-Dunphy
+HMSET Actor:22 Name Ty-Burrell DOB 22-08-1967 Sitcom Modern-Family Sitcom.Char Phil-Dunphy
+HMSET Actor:23 Name Jesse-Tyler-Ferguson DOB 22-10-1975 Sitcom Modern-Family Sitcom.Char Mitchell-Pritchett
+HMSET Actor:24 Name Eric-Stonestreet DOB 09-09-1971 Sitcom Modern-Family Sitcom.Char Cameron-Tucker
+HMSET Actor:25 Name Rico-Rodriguez DOB 31-07-1998 Sitcom Modern-Family Sitcom.Char Manny-Delgado
+HMSET Actor:26 Name Sarah-Hyland DOB 24-11-1990 Sitcom Modern-Family Sitcom.Char Haley-Dunphy
+HMSET Actor:27 Name Nolan-Gould DOB 28-10-1998 Sitcom Modern-Family Sitcom.Char Luke-Dunphy
+HMSET Actor:28 Name Ariel-Winter DOB 28-01-1998 Sitcom Modern-Family Sitcom.Char Alex-Dunphy
+
+Actors:
+LPUSH Actors Jerry-Seinfeld
+RPUSH Actors Julia_Louis-Dreyfus Michael-Richards Jason-Alexander
+RPUSH Actors Josh-Radnor Jason-Segel Cobie-Smulders Neil-Patrick-Harris Alyson-Hannigan
+RPUSH Actors Steve-Carell Jenna-Fischer John-Krasinksi Rainn-Wilson
+RPUSH Actors Jim-Parsons Johnny-Galecki Kaley-CUoco Simon-Helberg Kunal-Nayyar
+RPUSH Actors Ed-ONeill Sofia-Vergara Julie-Bowen Ty-Burrell Jesse-Tyler-Ferguson Eric-Stonestreet
+RPUSH Actors Rico-Rodriguez Sarah-Hyland Nolan-Gould Ariel-Winter
+
+Sitcoms
+LPUSH Sitcoms How-I-Met-Your-Mother
+RPUSH Sitcoms Seinfeld Modern-Family The-Big-Bang-Theory The-Office
+
+Rating:
+ZADD Rating 8.3 How-I-Met-Your-Mother
+ZADD Rating 8.8 Seinfeld
+ZADD Rating 8.4 Modern-Family
+ZADD Rating 8.1 The-Big-Bang-Theory
+ZADD RAting 8.9 The-Office
+
+Sitcoms Hash:
+HMSET Sitcom:1 Title How-I-Met-Your-Mother Year 2005 Seasons 9 Episodes 208 Awards 26
+HMSET Sitcom:2 Title Seinfeld Year 1989 Seasons 9 Episodes 172 Awards 74
+HMSET Sitcom:3 Title Modern-Family Year 2009 Seasons 11 Episodes 250 Awards 119
+HMSET Sitcom:4 Title The-Big-Bang-Theory Year 2007 Seasons 12 Episodes 280 Awards 77
+HMSET Sitcom:5 Title The-Office Year 2005 Seasons 9 Episodes 188 Awards 51
+
+Awards:
+ZADD Awards 26 How-I-Met-Your-Mother
+ZADD Awards 74 Seinfeld
+ZADD Awards 119 Modern-Family
+ZADD Awards 77 The-Big-Bang-Theory
+ZADD Awards 51 The-Office
+
+Seasons:
+ZADD Seasons 9 How-I-Met-Your-Mother
+ZADD Seasons 9 Seinfeld
+ZADD Seasons 11 Modern-Family
+ZADD Seasons 12 The-Big-Bang-Theory
+ZADD Seasons 9 The-Office 
+
+Year:
+ZADD Year 2005 How-I-Met-Your-Mother
+ZADD Year 1989 Seinfeld
+ZADD Year 2009 Modern-Family
+ZADD Year 2007 The-Big-Bang-Theory
+ZADD Year 2005 The-Office
+
+Episodes:
+ZADD Episodes 208 How-I-Met-Your-Mother
+ZADD Episodes 172 Seinfeld
+ZADD Episodes 250 Modern-Family
+ZADD Episodes 280 The-Big-Bang-Theory
+ZADD Episodes 188 The-Office
+
